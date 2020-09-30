@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="main">
+        <form>
+            <div class="input-group">
+                <input id="code" type="number" class="input-control" name="code" placeholder="saisie le code">
+                <img src="images/false.png"  id="icon" alt="faux" width="15" height="15">
+            </div>
+            <div class="label-group">
+                <p id="condition">Non</p>
+                <p class="help">Se souvenir de moi
+                    <span><i class="fas fa-info-circle" id="circle"></i></span>
+                    <span class="popuptext" id="myPopup">Se souvenir de moi<br><br><br>En cochant cette case, votre code client sera mémorisé sur cet appareil.<br><br> De cette manière vous n'aurez plus à le saisir lors de vos prochaines connexions.<br><br>
+                     Ceci est déconseillé si votre ordinateur est utilisé par d'autres personnes.<br>
+                     <button type="submit" style="margin: 5px 20px;border: 1px solid black;border-radius: 20px;padding: 10px;background-color: white;">J'ai compris</button></span>
+                </p>
+            </div>
+            <input type="submit" id="submit" value="Valider" disabled/>
+        </form>
+
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
