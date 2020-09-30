@@ -27,6 +27,6 @@
 /* s'applique à partir de 1000px de large */
 @media screen and (min-width: 1000px) {
     #bg {
-        display: none
+        /* display: none */
     }
 }

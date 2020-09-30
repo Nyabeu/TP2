@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <style>
+        article { width: 50%; display: none }
+        h1 { cursor: pointer; width: 80px }
+    </style>
+</head>
+<body>
+    <h1>JS</h1>
+    <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nisi nemo laboriosam sed, numquam non repudiandae animi totam quasi maxime quis. Aut ullam veritatis nisi asperiores magnam voluptatibus quibusdam accusamus!</article>
+
+    <h1>jQuery</h1>
+    <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque architecto suscipit distinctio rerum voluptates veniam aliquid cupiditate, incidunt expedita iste quos magnam? Officia, quo illum. Dolor, numquam? Cum, ducimus cupiditate.</article>
+
+    <input id="txtUsername" type="text" 
+        placeholder="username" />
+    <button id="btnTest">Test</button>
+
+    <div>
+        <ul id="list">
+            <li>Elem1</li>
+            <li>Elem2</li>
+            <li>Elem3</li>
+        </ul>
+    </div>
+
+
+    
+    <script>
+        console.log('JS')
+        var h1 = document.getElementsByTagName('h1');
+        h1[1].innerText = 'JQ';
+
+        var txtUsername     = document.getElementById('txtUsername');
+        var btnTest         = document.getElementById('btnTest');
+
+        btnTest.disabled = true; // désactive le bouton
+
+        txtUsername.addEventListener('keyup', () => {
+            if (txtUsername.value.length < 3) {
+                btnTest.disabled = true
+            } else {
+                btnTest.disabled = false
+            }
+        })
+
+        for (var i = 0; i < h1.length; i++) {
+            h1[i].addEventListener('click', (e) => {
+                // cible l'article suivant
+                var display = e.target.nextElementSibling.style.display;
+   
+                // si display n'est pas défini ou vaut none
+                if (!display || display == 'none') {
+                    // on affiche l'article suivant dans le DOM
+                    e.target.nextElementSibling.style.display = 'block';
+                } else {
+                    // on masque l'article suivant dans le DOM
+                    e.target.nextElementSibling.style.display = 'none';
+                }
+                
+            })
+        }
+
+        
+
+    </script>
+</body>
+</html>
